@@ -1,0 +1,18 @@
+{
+  "name": "electron-app",
+  "version": "1.0.0",
+  "description": "None yet",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bryan Ramsey",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^29.1.5"
+  },
+  "dependencies": {
+    "axios": "^1.6.8"
+  }
+}
