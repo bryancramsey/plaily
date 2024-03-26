@@ -6,15 +6,9 @@
     body { background: #333; color: white; }
     .navbar {
       background-color: #333;
-      overflow: hidden;
     }
     .navbar button {
-      float: left;
       color: #f2f2f2;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 17px;
     }
     .navbar button:hover {
       background-color: #ddd;
@@ -26,43 +20,21 @@
     }
     /* Dropdown button */
     .dropdown .dropbtn {
-      font-size: 16px;
-      border: none;
-      outline: none;
       color: white;
-      padding: 14px 16px;
-      background-color: inherit;
-      font-family: inherit; /* Important for vertical align on mobile phones */
-      margin: 0; /* Important for vertical align on mobile phones */
     }
     /* Dropdown content (hidden by default) */
     .dropdown-content {
-      display: none;
-      position: absolute;
       background-color: #f9f9f9;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
     }
 
     /* Links inside the dropdown */
     .dropdown-content button {
-      float: none;
       color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      text-align: left;
     }
 
     /* Add a grey background color to dropdown links on hover */
     .dropdown-content button:hover {
       background-color: #ddd;
-    }
-
-    /* Show the dropdown menu on hover */
-    .dropdown:hover .dropdown-content {
-      display: block;
     }
   }
   
@@ -70,15 +42,9 @@
     body { background: #ddd; color: black; }
     .navbar {
       background-color: #ddd;
-      overflow: hidden;
     }
     .navbar button {
-      float: left;
       color: black;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size: 17px;
     }
     .navbar button:hover {
       background-color: #333;
@@ -90,33 +56,16 @@
     }
     /* Dropdown button */
     .dropdown .dropbtn {
-      font-size: 16px;
-      border: none;
-      outline: none;
       color: black;
-      padding: 14px 16px;
-      background-color: inherit;
-      font-family: inherit; /* Important for vertical align on mobile phones */
-      margin: 0; /* Important for vertical align on mobile phones */
     }
     /* Dropdown content (hidden by default) */
     .dropdown-content {
-      display: none;
-      position: absolute;
       background-color: #f9f9f9;
-      min-width: 160px;
-      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-      z-index: 1;
     }
 
     /* Links inside the dropdown */
     .dropdown-content button {
-      float: none;
       color: black;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      text-align: left;
     }
 
     /* Add a grey background color to dropdown links on hover */
@@ -124,12 +73,58 @@
       background-color: #ddd;
       color: black;
     }
-
-    /* Show the dropdown menu on hover */
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
   }
+
+.navbar {
+    overflow: hidden;
+}
+
+.navbar button {
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  border: none;
+  outline: none;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content button {
+  float: none;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  font-family: inherit;
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 iframe {
   height: 800px;
@@ -143,3 +138,10 @@ iframe {
   overflow: hidden;
 }
 
+webview {
+  width: 99%;
+  height: 650px;
+  display: inline-flex;
+  resize: vertical;
+  overflow: auto;
+}

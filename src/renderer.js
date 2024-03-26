@@ -1,68 +1,70 @@
+const game = document.getElementById('game');
+
 document.getElementById('toggle-dark-mode').addEventListener('click', async () => {
     const isDarkMode = await window.api.toggleDark()
     document.getElementById('theme-source').innerHTML = isDarkMode ? 'Dark' : 'Light'
 });
 
 document.getElementById('redactle').addEventListener('click', async () => {
-    await window.api.changeGame('https://redactle.net/')
+    game.src = 'https://redactle.net/'
 })
 
 document.getElementById('semantle').addEventListener('click', async () => {
-    await window.api.changeGame('https://semantle.com/')
+    game.src = 'https://semantle.com/'
 })
 
 document.getElementById('worldle').addEventListener('click', async () => {
-    await window.api.changeGame('https://worldle.teuteuf.fr/')
+    game.src = 'https://worldle.teuteuf.fr/'
 })
 
 document.getElementById('framed').addEventListener('click', async () => {
-    await window.api.changeGame('https://framed.wtf/')
+    game.src = 'https://framed.wtf/'
 })
 
 document.getElementById('timeguessr').addEventListener('click', async () => {
-    await window.api.changeGame('https://timeguessr.com/roundonedaily')
+    game.src = 'https://timeguessr.com/roundonedaily'
 })
 
 document.getElementById('connections').addEventListener('click', async () => {
-    await window.api.changeGame('https://www.nytimes.com/games/connections')
+    game.src = 'https://www.nytimes.com/games/connections'
 })
 
 document.getElementById('gamedle').addEventListener('click', async () => {
-    await window.api.changeGame('https://www.gamedle.wtf/classic?lang=en')
+    game.src = 'https://www.gamedle.wtf/classic?lang=en'
 })
 
 document.getElementById('listed').addEventListener('click', async () => {
-    await window.api.changeGame('https://listed.fun/')
+    game.src = 'https://listed.fun/'
 })
 
 document.getElementById('tradle').addEventListener('click', async () => {
-    await window.api.changeGame('https://games.oec.world/en/tradle/')
+    game.src = 'https://games.oec.world/en/tradle/'
 })
 
 document.getElementById('rottentom').addEventListener('click', async () => {
-    await window.api.changeGame('https://www.rottentomatoes.com/movie-trivia/')
+    game.src = 'https://www.rottentomatoes.com/movie-trivia/'
 })
 
 document.getElementById('globle').addEventListener('click', async () => {
-    await window.api.changeGame('https://globle-game.com/game')
+    game.src = 'https://globle-game.com/game'
 })
 
 document.getElementById('costcodle').addEventListener('click', async () => {
-    await window.api.changeGame('https://costcodle.com/')
+    game.src = 'https://costcodle.com/'
 })
 
 document.getElementById('movie2movie').addEventListener('click', async () => {
-    await window.api.changeGame('https://movietomovie.com/')
+    game.src = 'https://movietomovie.com/'
 })
 
 document.getElementById('chronophoto').addEventListener('click', async () => {
-    await window.api.changeGame('https://www.chronophoto.app/daily.html')
+    game.src = 'https://www.chronophoto.app/daily.html'
 })
 
 document.getElementById('spellcheck').addEventListener('click', async () => {
-    await window.api.changeGame('https://spellcheckgame.com/')
+    game.src = 'https://spellcheckgame.com/'
 })
 
 document.getElementById('bandle').addEventListener('click', async () => {
-    await window.api.changeGame('https://bandle.app/')
+    game.src = 'https://bandle.app/'
 })

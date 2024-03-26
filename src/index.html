@@ -13,18 +13,28 @@
     <button id="worldle">Worldle</button>
     <button id="framed">Framed</button>
     <button id="timeguessr">Timeguessr</button>
-    <button id="connections">Connections</button>         
-    <button id="gamedle">Gamedle</button>
-    <button id="listed">Listed</button>
-    <button id="tradle">Tradle</button>
-    <button id="rottentom">Rotten Tomatoes</button>
-    <button id="globle">Globle</button>
-    <button id="costcodle">Costcodle</button>
-    <button id="movie2movie">Movie to Movie</button>
-    <button id="chronophoto">Chronophoto</button>
-    <button id="spellcheck">Spellcheck</button>
-    <button id="bandle">Bandle</button>
+    <button id="connections">Connections</button>
+    <div class="dropdown">
+      <button class="dropbtn">More
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <button id="gamedle">Gamedle</button>
+        <button id="listed">Listed</button>
+        <button id="tradle">Tradle</button>
+        <button id="rottentom">Rotten Tomatoes</button>
+        <button id="globle">Globle</button>
+        <button id="costcodle">Costcodle</button>
+        <button id="movie2movie">Movie to Movie</button>
+        <button id="chronophoto">Chronophoto</button>
+        <button id="spellcheck">Spellcheck</button>
+        <button id="bandle">Bandle</button>
+      </div>
+    </div>         
     <button id="toggle-dark-mode">Toggle Dark Mode</button>
+  </div>
+  <div>
+    <webview id="game" src="https://redactle.net/"></webview>
   </div>
     <script src="renderer.js"></script>
   </body>
