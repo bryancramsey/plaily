@@ -5,6 +5,18 @@ document.getElementById('toggle-dark-mode').addEventListener('click', async () =
     document.getElementById('theme-source').innerHTML = isDarkMode ? 'Dark' : 'Light'
 });
 
+document.getElementById('minimizebtn').addEventListener('click', async () => {
+    window.api.minimize()
+})
+
+document.getElementById('maximizebtn').addEventListener('click', async () => {
+    window.api.maximize()
+})
+
+document.getElementById('exitbtn').addEventListener('click', async () => {
+    window.api.close()
+})
+
 document.getElementById('redactle').addEventListener('click', async () => {
     game.src = 'https://redactle.net/'
 })
