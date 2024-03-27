@@ -2,22 +2,7 @@
   "name": "plaily",
   "build": {
     "appId": "com.bryanramsey.plaily",
-    "productName": "plaily",
-    "mac": {
-      "category": "public.app-category.lifestyle"
-    },
-    "dmg": {
-      "icon": false
-    },
-    "linux": {
-      "target": [
-        "AppImage"
-      ],
-      "category": "Office"
-    },
-    "win": {
-      "target": "nsis"
-    }
+    "productName": "plaily"
   },
   "version": "1.0.0",
   "description": "Play all your DLEs in one place!",
