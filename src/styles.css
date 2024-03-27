@@ -192,6 +192,7 @@ body {
   outline: none;
   background-color: inherit;
   font-family: inherit;
+  width: 99%;
   font-size: 16px;
   margin: 0;
 }

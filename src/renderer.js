@@ -21,6 +21,10 @@ document.getElementById('redactle').addEventListener('click', async () => {
     game.src = 'https://redactle.net/'
 })
 
+document.getElementById('minicross').addEventListener('click', async () => {
+    game.src = 'https://www.nytimes.com/crosswords/game/mini'
+})
+
 document.getElementById('semantle').addEventListener('click', async () => {
     game.src = 'https://semantle.com/'
 })
