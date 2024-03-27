@@ -20,7 +20,7 @@ jobs:
           node-version: '20.9.0'
 
       - name: Install dmg-license (if needed)
-        if: ${{ matrix.os != 'windows-latest' }}
+        if: ${{ matrix.os == 'macos-latest' }}
         run: yarn add dmg-license
 
       - name: Build/release Electron app
