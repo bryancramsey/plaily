@@ -16,10 +16,7 @@
       "category": "Office"
     },
     "win": {
-      "target": "nsis",
-      "arch": [
-        "x64"
-      ]
+      "target": "nsis"
     }
   },
   "version": "1.0.0",
