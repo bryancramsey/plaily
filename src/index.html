@@ -2,21 +2,20 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Bryan's DLES</title>
+    <title>Plaily</title>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
     <link rel="stylesheet" type="text/css" href="./styles.css">
 </head>
 <body>
   <div class="title-bar">
     <div class="drag-bar">
-      <img>
+      <img class="logo" src="./icons/logo.png">
     </div>
     <div class="title-bar-buttons">
       <button id="minimizebtn" class="minimizebtn">-</button>
       <button id="maximizebtn" class="maximizebtn">□</button>
       <button id="exitbtn" class="exitbtn">X</button>
     </div>
-
   </div>
   <div class="navbar">
     <button id="redactle">Redactle</button>
@@ -44,7 +43,8 @@
     </div>         
     <button id="toggle-dark-mode">Toggle Dark Mode</button>
   </div>
-  <div>
+  <br>
+  <div class="content-container">
     <webview id="game" src="https://redactle.net/"></webview>
   </div>
     <script src="renderer.js"></script>
