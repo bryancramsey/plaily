@@ -22,7 +22,7 @@ module.exports = {
       platforms: ['linux'],
       config: {
         options: {
-          icon: '/src/icons/pnglogo.png'
+          icon: './src/icons/pnglogo.png'
         }
       },
     },

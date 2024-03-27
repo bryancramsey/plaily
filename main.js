@@ -9,7 +9,7 @@ function createWindow() {
     width: 1000,
     height: 600,
     frame: false,
-    icon: '/src/icons/pnglogo.png',
+    icon: './src/icons/pnglogo.png',
     webPreferences: {
       preload: path.join(__dirname, 'preload.js'),
       webviewTag: true
