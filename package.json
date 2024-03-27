@@ -1,21 +1,38 @@
 {
   "name": "plaily",
+  "build": {
+		"appId": "com.bryanramsey.plaily",
+		"productName": "plaily",
+		"mac": {
+			"category": "public.app-category.lifestyle"
+		},
+		"dmg": {
+			"icon": false
+		},
+		"linux": {
+			"target": ["AppImage"],
+			"category": "Office"
+		}
+	},
   "version": "1.0.0",
   "description": "Play all your DLEs in one place!",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "electron-builder install-app-deps",
+		"build": "electron-builder --mac --windows --linux",
+		"release": "electron-builder --mac --windows --linux --publish always"
   },
   "author": "Bryan Ramsey",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^29.1.5"
+    "electron": "^29.1.5",
+    "electron-builder": "^24.13.3"
   },
   "dependencies": {
     "@cliqz/adblocker-electron": "^1.26.16",
     "@electron/fuses": "^1.8.0",
-    "cross-fetch": "^4.0.0",
-    "electron-builder": "^24.13.3"
+    "cross-fetch": "^4.0.0"
   }
 }
