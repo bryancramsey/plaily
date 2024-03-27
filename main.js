@@ -1,4 +1,5 @@
-const { app, BrowserWindow, ipcMain, nativeTheme, session } = require('electron/main')
+const { app, remote, BrowserView, BrowserWindow, ipcMain, nativeTheme, session } = require('electron/main')
+const axios = require('axios');
 const path = require('node:path')
 const { ElectronBlocker } = require('@cliqz/adblocker-electron')
 const { fetch } = require('cross-fetch')
