@@ -19,6 +19,10 @@ jobs:
         with:
           node-version: '20.9.0'
 
+      - name: Install dmg-license (if needed)
+        if: ${{ matrix.os != 'windows-latest' }}
+        run: yarn add dmg-license
+
       - name: Build/release Electron app
         uses: samuelmeuli/action-electron-builder@v1
         with:
