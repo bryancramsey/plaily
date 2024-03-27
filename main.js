@@ -1,8 +1,14 @@
-const { app, remote, BrowserView, BrowserWindow, ipcMain, nativeTheme } = require('electron/main')
+const { app, remote, BrowserView, BrowserWindow, ipcMain, nativeTheme, session } = require('electron/main')
 const axios = require('axios');
 const path = require('node:path')
+const { ElectronBlocker } = require('@cliqz/adblocker-electron')
+const { fetch } = require('cross-fetch')
 
 let window;
+
+ElectronBlocker.fromPrebuiltAdsAndTracking(fetch).then((blocker) => {
+  blocker.enableBlockingInSession(session.defaultSession);
+});
 
 function createWindow() {
   return new BrowserWindow({
@@ -18,7 +24,7 @@ function createWindow() {
 }
 
 function showMainWindow() {
-    window.loadFile('src/index.html')
+  window.loadFile('src/index.html')
 }
 
 function minimizeWindow() {
