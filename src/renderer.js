@@ -37,6 +37,10 @@ document.getElementById('timeguessr').addEventListener('click', async () => {
     game.src = 'https://timeguessr.com/roundonedaily'
 })
 
+document.getElementById('wordle').addEventListener('click', async () => {
+    game.src = 'https://www.nytimes.com/games/wordle/index.html'
+})
+
 document.getElementById('connections').addEventListener('click', async () => {
     game.src = 'https://www.nytimes.com/games/connections'
 })
