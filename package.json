@@ -1,6 +1,6 @@
 {
   "name": "plaily",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Play all your DLEs in one place!",
   "main": "main.js",
   "scripts": {
