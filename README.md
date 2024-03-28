@@ -9,3 +9,6 @@ Plaily aims to streamline the player experience for daily games (DLEs) such as W
 - Customizable hotbar
 - User can add or remove additional DLEs
 - User settings control panel
+
+## Releases
+<a href="https://github.com/bryancramsey/plaily/releases/latest">Stable</a>
