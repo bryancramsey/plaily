@@ -11,6 +11,8 @@ ElectronBlocker.fromPrebuiltAdsAndTracking(fetch).then((blocker) => {
 
 function createWindow() {
   return new BrowserWindow({
+    minHeight: 600,
+    minWidth: 1000,
     width: 1000,
     height: 600,
     frame: false,
