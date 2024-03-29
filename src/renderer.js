@@ -5,6 +5,10 @@ document.getElementById('toggle-dark-mode').addEventListener('click', async () =
     document.getElementById('theme-source').innerHTML = isDarkMode ? 'Dark' : 'Light'
 });
 
+document.getElementById('settingsbtn').addEventListener('click', async () => {
+    window.api.loadSettings()
+})
+
 document.getElementById('minimizebtn').addEventListener('click', async () => {
     window.api.minimize()
 })

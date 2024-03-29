@@ -117,8 +117,9 @@ body::-webkit-scrollbar-thumb:hover, webview::-webkit-scrollbar-thumb:hover {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 5px;
   margin-left: 5px;
+  height: 20px;
+  width: 20px;
   outline: none;
 }
 
@@ -126,12 +127,17 @@ body::-webkit-scrollbar-thumb:hover, webview::-webkit-scrollbar-thumb:hover {
   background-color: #ddd;
 }
 
+.gearicon {
+  height: 10px;
+  width: 10px;
+}
+
 /* Portion of title bar that is draggable, contains logo and is to the left of the window control buttons */
 .drag-bar {
   -webkit-app-region: drag;
   -webkit-user-select: none;
   display: flex;
-  width: 90%;
+  width: 88%;
   height: 20px;
   top: 0px;
   flex-direction: row;

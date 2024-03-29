@@ -28,6 +28,11 @@ function showMainWindow() {
   window.loadFile('src/index.html')
 }
 
+function changeWindow() {
+  console.log("That doesn't work yet!")
+  // window.loadFile('src/settings.html');
+}
+
 function minimizeWindow() {
   window.minimize();
 }
@@ -71,6 +76,10 @@ ipcMain.handle('dark-mode:toggle', () => {
       nativeTheme.themeSource = 'dark'
     }
     return nativeTheme.shouldUseDarkColors
+})
+
+ipcMain.handle('changeWindow', () => {
+  changeWindow();
 })
 
 ipcMain.handle('minimize', () => {
