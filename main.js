@@ -5,14 +5,16 @@ const { fetch } = require('cross-fetch')
 
 let window;
 
+// Enable adblocking functionality for the session
 ElectronBlocker.fromPrebuiltAdsAndTracking(fetch).then((blocker) => {
   blocker.enableBlockingInSession(session.defaultSession);
 });
 
+// Create and configure window
 function createWindow() {
   return new BrowserWindow({
-    minHeight: 600,
     minWidth: 1000,
+    minHeight: 600,
     width: 1000,
     height: 600,
     frame: false,
@@ -22,15 +24,6 @@ function createWindow() {
       webviewTag: true
     }
   })
-}
-
-function showMainWindow() {
-  window.loadFile('src/index.html')
-}
-
-function changeWindow() {
-  console.log("That doesn't work yet!")
-  // window.loadFile('src/settings.html');
 }
 
 function minimizeWindow() {
@@ -51,7 +44,7 @@ function maximizeWindow() {
 
 app.whenReady().then(() => {
   window = createWindow();
-  showMainWindow();
+  window.loadFile('src/index.html');
 
   app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) {
@@ -76,10 +69,6 @@ ipcMain.handle('dark-mode:toggle', () => {
       nativeTheme.themeSource = 'dark'
     }
     return nativeTheme.shouldUseDarkColors
-})
-
-ipcMain.handle('changeWindow', () => {
-  changeWindow();
 })
 
 ipcMain.handle('minimize', () => {

@@ -6,7 +6,7 @@ document.getElementById('toggle-dark-mode').addEventListener('click', async () =
 });
 
 document.getElementById('settingsbtn').addEventListener('click', async () => {
-    window.api.loadSettings()
+    
 })
 
 document.getElementById('minimizebtn').addEventListener('click', async () => {
@@ -21,16 +21,25 @@ document.getElementById('exitbtn').addEventListener('click', async () => {
     window.api.close()
 })
 
+function gameForm() {
+    alert('not quite yet :)')
+}
+
+function changeGame(url) {
+    game.src = url
+}
+
+// Listeners and game changers for built-in DLEs. Faster and more responsive than onclick method used for user-added games.
 document.getElementById('redactle').addEventListener('click', async () => {
     game.src = 'https://redactle.net/'
 })
 
-document.getElementById('minicross').addEventListener('click', async () => {
-    game.src = 'https://www.nytimes.com/crosswords/game/mini'
-})
-
 document.getElementById('semantle').addEventListener('click', async () => {
     game.src = 'https://semantle.com/'
+})
+
+document.getElementById('minicross').addEventListener('click', async () => {
+    game.src = 'https://www.nytimes.com/crosswords/game/mini'
 })
 
 document.getElementById('worldle').addEventListener('click', async () => {

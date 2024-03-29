@@ -12,7 +12,12 @@
       <img class="logo" src="./icons/pnglogo.png">
     </div>
     <div class="title-bar-buttons">
-      <button id="settingsbtn" class="settingsbtn"><img src="./icons/gear.png" class="gearicon"></button>
+      <div class="settings-dropdown">
+        <button id="settingsbtn" class="settings-dropbtn"><img src="./icons/gear.png" class="gearicon"></button>
+        <div class="settings-dropdown-content">
+          <button id="addgame" onclick='gameForm()'>Add Game</button>
+        </div>
+      </div>
       <button id="minimizebtn" class="minimizebtn">-</button>
       <button id="maximizebtn" class="maximizebtn">□</button>
       <button id="exitbtn" class="exitbtn">X</button>
