@@ -5,10 +5,6 @@ document.getElementById('toggle-dark-mode').addEventListener('click', async () =
     document.getElementById('theme-source').innerHTML = isDarkMode ? 'Dark' : 'Light'
 });
 
-document.getElementById('settingsbtn').addEventListener('click', async () => {
-    
-})
-
 document.getElementById('minimizebtn').addEventListener('click', async () => {
     window.api.minimize()
 })
@@ -21,8 +17,34 @@ document.getElementById('exitbtn').addEventListener('click', async () => {
     window.api.close()
 })
 
-function gameForm() {
-    alert('not quite yet :)')
+document.getElementById('addgame').addEventListener('click', async () => {
+    var form = document.getElementById('add-game-form');
+    if (form.style.display === "none") {
+        form.style.display = "flex";
+    } else {
+        form.style.display = "none";
+    }
+})
+
+function addGame() {
+    const url = document.getElementById('url-to-add').value;
+    const gameName = document.getElementById('name-to-add').value;
+
+    const currBottom = document.getElementsByClassName("bottommost-button");
+    for (let i = 0; i < currBottom.length; i++) {
+        currBottom[i].classList.remove("bottommost-button");
+    }
+
+    const newButton = document.createElement("button");
+    newButton.textContent = gameName;
+    newButton.classList.add("bottommost-button");
+    newButton.setAttribute("onclick", `changeGame('${url}')`);
+
+
+    document.getElementById('more-games').appendChild(newButton);
+
+
+    document.getElementById('add-game-form').style.display = "none";
 }
 
 function changeGame(url) {

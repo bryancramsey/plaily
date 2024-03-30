@@ -15,12 +15,24 @@
       <div class="settings-dropdown">
         <button id="settingsbtn" class="settings-dropbtn"><img src="./icons/gear.png" class="gearicon"></button>
         <div class="settings-dropdown-content">
-          <button id="addgame" onclick='gameForm()'>Add Game</button>
+          <button id="addgame">Add Game</button>
         </div>
       </div>
       <button id="minimizebtn" class="minimizebtn">-</button>
       <button id="maximizebtn" class="maximizebtn">□</button>
       <button id="exitbtn" class="exitbtn">X</button>
+    </div>
+  </div>
+  <div id="add-game-form" class="game-form-container">
+    <div id="form-container" class="form-container">
+      <h1 class="game-form-title">Add a Game</h1>
+      <div class="form">
+        <div class="input-group">
+          <input type="text" id="url-to-add" class="text-box" value="Paste URL here">
+          <input type="text" id="name-to-add" class="text-box" value="Name of DLE">
+          <button id="game-submit" onclick='addGame()'>Add</button>
+        </div>
+      </div>
     </div>
   </div>
   <div class="navbar">
@@ -35,7 +47,7 @@
       <button class="dropbtn">More
         <i class="fa fa-caret-down"></i>
       </button>
-      <div class="dropdown-content">
+      <div id="more-games" class="dropdown-content">
         <button id="timeguessr">Timeguessr</button>
         <button id="gamedle">Gamedle</button>
         <button id="listed">Listed</button>

@@ -2,8 +2,10 @@ const { app, BrowserWindow, ipcMain, nativeTheme, session } = require('electron/
 const path = require('node:path')
 const { ElectronBlocker } = require('@cliqz/adblocker-electron')
 const { fetch } = require('cross-fetch')
+const Store = require('electron-store');
 
 let window;
+const store = new Store();
 
 // Enable adblocking functionality for the session
 ElectronBlocker.fromPrebuiltAdsAndTracking(fetch).then((blocker) => {
