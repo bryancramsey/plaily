@@ -15,24 +15,12 @@
       <div class="settings-dropdown">
         <button id="settingsbtn" class="settings-dropbtn"><img src="./icons/gear.png" class="gearicon"></button>
         <div class="settings-dropdown-content">
-          <button id="addgame">Add Game</button>
+          <button id="addgame" onclick="document.getElementById('add-game-form').style.display='block'">Add Game</button>
         </div>
       </div>
       <button id="minimizebtn" class="minimizebtn">-</button>
       <button id="maximizebtn" class="maximizebtn">□</button>
       <button id="exitbtn" class="exitbtn">X</button>
-    </div>
-  </div>
-  <div id="add-game-form" class="game-form-container">
-    <div id="form-container" class="form-container">
-      <h1 class="game-form-title">Add a Game</h1>
-      <div class="form">
-        <div class="input-group">
-          <input type="text" id="url-to-add" class="text-box" value="Paste URL here">
-          <input type="text" id="name-to-add" class="text-box" value="Name of DLE">
-          <button id="game-submit" onclick='addGame()'>Add</button>
-        </div>
-      </div>
     </div>
   </div>
   <div class="navbar">
@@ -58,10 +46,22 @@
         <button id="movie2movie">Movie to Movie</button>
         <button id="chronophoto">Chronophoto</button>
         <button id="spellcheck">Spellcheck</button>
+        <button id="foodguessr">Foodguessr</button>
         <button id="bandle" class="bottommost-button">Bandle</button>
       </div>
     </div>         
     <button id="toggle-dark-mode" class="rightmost-button">Toggle Dark Mode</button>
+  </div>
+  <div id="add-game-form" class="modal">
+    <span onclick="document.getElementById('add-game-form').style.display='none'" class="close" title="Close Modal">&times;</span>
+    <form class="modal-content animate">
+      <div class="container">
+        <h1 class="game-form-title">Add a Game</h1>
+        <input type="text" id="url-to-add" class="text-box" value="Paste URL here" name="url">
+        <input type="text" id="name-to-add" class="text-box" value="Name of DLE" name="game-name">
+        <button id="game-submit" onclick='addGame()' class="button">Add</button>
+      </div>
+    </form>
   </div>
   <br>
   <div class="content-container">

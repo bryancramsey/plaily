@@ -2,10 +2,9 @@ const { app, BrowserWindow, ipcMain, nativeTheme, session } = require('electron/
 const path = require('node:path')
 const { ElectronBlocker } = require('@cliqz/adblocker-electron')
 const { fetch } = require('cross-fetch')
-const Store = require('electron-store');
+const fs = require('fs')
 
 let window;
-const store = new Store();
 
 // Enable adblocking functionality for the session
 ElectronBlocker.fromPrebuiltAdsAndTracking(fetch).then((blocker) => {
@@ -26,22 +25,6 @@ function createWindow() {
       webviewTag: true
     }
   })
-}
-
-function minimizeWindow() {
-  window.minimize();
-}
-
-function closeWindow() {
-  window.close();
-}
-
-function maximizeWindow() {
-  if (window.isMaximized()) {
-    window.unmaximize();
-  } else {
-    window.maximize();
-  };
 }
 
 app.whenReady().then(() => {
@@ -74,13 +57,26 @@ ipcMain.handle('dark-mode:toggle', () => {
 })
 
 ipcMain.handle('minimize', () => {
-  minimizeWindow();
+  window.minimize();
 })
 
 ipcMain.handle('maximize', () => {
-  maximizeWindow();
+  if (window.isMaximized()) {
+    window.unmaximize();
+  } else {
+    window.maximize();
+  };
 })
 
 ipcMain.handle('close', () => {
-  closeWindow();
+  window.close();
+})
+
+ipcMain.handle('saveGame', (event, data) => {
+  fs.writeFile('AddedGames.txt', data, (err) => {
+    if (err) throw err;
+    else {
+      console.log("Game has been saved")
+    }
+  })
 })

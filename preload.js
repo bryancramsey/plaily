@@ -5,4 +5,5 @@ contextBridge.exposeInMainWorld('api', {
   minimize: () => ipcRenderer.invoke('minimize'),
   maximize: () => ipcRenderer.invoke('maximize'),
   close: () => ipcRenderer.invoke('close'),
+  saveGame: (data) => ipcRenderer.invoke('saveGame', data),
 });
