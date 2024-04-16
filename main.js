@@ -95,7 +95,6 @@ ipcMain.handle('loadGames', () => {
         const game = [values[i], values[i + 1]];
         games.push(game);
       }
-      console.log(games[0][0])
       resolve(games);
   })
   })
