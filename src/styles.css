@@ -287,7 +287,7 @@ body::-webkit-scrollbar-thumb:hover, webview::-webkit-scrollbar-thumb:hover {
 .modal-content {
   background-color: #573988;
   margin: 20px auto; /* 15% from the top and centered */
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 50%; /* Could be more or less, depending on screen size */
   border: none;
   outline: none;
   border-radius: 12px;
