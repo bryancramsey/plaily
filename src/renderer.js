@@ -27,6 +27,34 @@ window.onclick = function(event) {
     }
 }
 
+// Load added games
+window.onload = async function() {
+    const games = await window.api.loadGames();
+    for (let i = 0; i < games.length; i++) {
+        const url = games[i][0];
+        const gameName = games[i][1];
+
+        // Iterate through the elements in the dropdown list, and remove bottommost-button class from them (only last item will have it)
+        const currBottom = document.getElementsByClassName("bottommost-button");
+        for (let j = 0; j < currBottom.length; j++) {
+            currBottom[j].classList.remove("bottommost-button");
+        }
+
+        // Create new button for new game
+        const newButton = document.createElement("button");
+        newButton.textContent = gameName;
+
+        // Add styling to new button to round corners for bottom-most element of dropdown
+        newButton.classList.add("bottommost-button");
+
+        // Add onclick attribute to the new button to call the changeGame function
+        newButton.setAttribute("onclick", `changeGame('${url}')`);
+
+        // Add new button to dropdown list
+        document.getElementById('more-games').appendChild(newButton);
+    }
+}
+
 // Logic for adding a game specified by the user in the add game form. Accepts URL and Name to create a new button at the bottom of the dropdown list in the navbar
 function addGame() {
     document.getElementById('add-game-form').style.display = "none";
@@ -53,7 +81,7 @@ function addGame() {
     // Add new button to dropdown list
     document.getElementById('more-games').appendChild(newButton);
     
-    var data = url.concat(",", gameName);
+    var data = url + "," + gameName + ",";
     window.api.saveGame(data);
 
 }

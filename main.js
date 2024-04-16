@@ -73,10 +73,30 @@ ipcMain.handle('close', () => {
 })
 
 ipcMain.handle('saveGame', (event, data) => {
-  fs.writeFile('AddedGames.txt', data, (err) => {
+  fs.writeFile('AddedGames.txt', data, {flag: "a"}, (err) => {
     if (err) throw err;
     else {
       console.log("Game has been saved")
     }
+  })
+})
+
+ipcMain.handle('loadGames', () => {
+  return new Promise((resolve, reject) => {
+    fs.readFile('AddedGames.txt', "utf-8", (err, data) => {
+      if (err) {
+        console.error(err);
+        reject(err);
+        return;
+      }
+      const values = data.split(',');
+      const games = [];
+      for (let i = 0; i < values.length / 2; i = i + 2) {
+        const game = [values[i], values[i + 1]];
+        games.push(game);
+      }
+      console.log(games[0][0])
+      resolve(games);
+  })
   })
 })
