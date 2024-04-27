@@ -1,6 +1,6 @@
 {
   "name": "plaily",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Play all your DLEs in one place!",
   "main": "main.js",
   "scripts": {
@@ -12,21 +12,20 @@
   "author": "Bryan Ramsey",
   "license": "ISC",
   "devDependencies": {
-    "@electron-forge/cli": "^7.3.1",
-    "@electron-forge/maker-deb": "^7.3.1",
-    "@electron-forge/maker-rpm": "^7.3.1",
-    "@electron-forge/maker-squirrel": "^7.3.1",
-    "@electron-forge/maker-zip": "^7.3.1",
-    "@electron-forge/plugin-auto-unpack-natives": "^7.3.1",
+    "@electron-forge/cli": "^7.4.0",
+    "@electron-forge/maker-deb": "^7.4.0",
+    "@electron-forge/maker-rpm": "^7.4.0",
+    "@electron-forge/maker-squirrel": "^7.4.0",
+    "@electron-forge/maker-zip": "^7.4.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.4.0",
+    "@electron-forge/plugin-fuses": "^7.4.0",
     "@electron-forge/publisher-github": "^7.3.1",
+    "@electron/fuses": "^1.8.0",
     "electron": "^29.1.5"
   },
   "dependencies": {
     "@cliqz/adblocker-electron": "^1.26.16",
-    "@electron-forge/plugin-fuses": "^7.3.1",
-    "@electron/fuses": "^1.8.0",
     "cross-fetch": "^4.0.0",
-    "electron-forge": "^5.2.4",
     "electron-prebuilt-compile": "^8.2.0",
     "electron-squirrel-startup": "^1.0.0"
   }
