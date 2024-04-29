@@ -1,15 +1,22 @@
 const { FusesPlugin } = require('@electron-forge/plugin-fuses');
 const { FuseV1Options, FuseVersion } = require('@electron/fuses');
+const path = require('path');
+const os = require('os');
 
 module.exports = {
   packagerConfig: {
     asar: true,
+    icon: './src/icons/logo',
+    out: path.join(os.homedir(), 'Downloads')
   },
   rebuildConfig: {},
   makers: [
     {
       name: '@electron-forge/maker-squirrel',
-      config: {},
+      config: {
+        setupExe: 'plaily-setup.exe',
+        setupIcon: './src/icons/logo.ico'
+      },
     },
     {
       name: '@electron-forge/maker-zip',
